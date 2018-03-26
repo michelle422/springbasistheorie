@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 
 //@Component
 //@Qualifier("ECB")
-public class ECBKoersenClient implements KoersenClient {
+class ECBKoersenClient implements KoersenClient {
 	private static final Logger LOGGER =
 			 Logger.getLogger(ECBKoersenClient.class.getName());
 	private final URL url;

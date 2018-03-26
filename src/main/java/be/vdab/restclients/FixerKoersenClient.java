@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 
 //@Component
 //@Qualifier("Fixer")
-public class FixerKoersenClient implements KoersenClient {
+class FixerKoersenClient implements KoersenClient {
 	private static final Logger LOGGER =
 			 Logger.getLogger(FixerKoersenClient.class.getName());
 	private final URL url;
