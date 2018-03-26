@@ -7,12 +7,18 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+@Qualifier("Fixer")
 public class FixerKoersenClient implements KoersenClient {
 	private static final Logger LOGGER =
 			 Logger.getLogger(FixerKoersenClient.class.getName());
 	private final URL url;
 	
-	public FixerKoersenClient(URL url) {
+	public FixerKoersenClient(@Value("${fixerKoersenURL}") URL url) {
 		this.url = url;
 	}
 
